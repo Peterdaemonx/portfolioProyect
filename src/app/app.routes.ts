@@ -4,15 +4,17 @@ import {
   PortafolioComponent,
   ProductoComponent,
   SearchComponent,
-  AboutComponent
+  AboutComponent,
+  LoginFormComponent
 } from "./components/index.paginas"
 
 const app_routes: Routes = [
-  { path: 'home', component: PortafolioComponent },
+  { path: '', component: PortafolioComponent },
   { path: 'producto/:id', component: ProductoComponent },
   { path: 'about', component: AboutComponent },
   { path: 'search/:termino', component: SearchComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+  { path: 'login', component: LoginFormComponent },
+  { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
 export const app_routing = RouterModule.forRoot(app_routes);

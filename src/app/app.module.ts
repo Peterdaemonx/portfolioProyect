@@ -40,6 +40,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     InformacionService,
     ProductoService,
     {provide: APP_BASE_HREF, useValue: '/'}
+
   ],
   bootstrap: [AppComponent]
 })
