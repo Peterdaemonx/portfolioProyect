@@ -28,8 +28,11 @@
             </ul>
           </nav>
         </li>
-        <li class="rk-menu__item" routerLinkActive="active">
+        <li class="rk-menu__item" routerLinkActive="active" *ngIf="loginService.isSuccessfullLogin == false">
           <a routerLink="login" class="rk-menu__link">Login</a>
+        </li>
+        <li class="rk-menu__item" routerLinkActive="active" *ngIf="loginService.isSuccessfullLogin == true">
+          <a routerLink="login" class="rk-menu__link">Logout</a>
         </li>
       </ul>
       <div class="rk-search">

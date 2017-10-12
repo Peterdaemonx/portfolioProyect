@@ -1,9 +1,7 @@
-<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <div class="wrapper">
-  <h2>Welcome</h2>
-  <p class="explanationLogin">To sign-in into our application please provide a valid credentials.</p>
-  <form class="form" method="post" action="yourpage.html">
+  <h2 class="loginH2">Welcome</h2>
+  <p class="explanationLogin">{{ information }}</p>
+  <form (submit)="loginForm($event)" class="form" method="post">
     <input type="text" name="inputLogin" placeholder="User">
     <input type="password" name="inputLogin" placeholder="Pasword">
     <input type="submit" class="login" value="Login">
