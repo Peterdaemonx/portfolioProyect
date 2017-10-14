@@ -1,0 +1,54 @@
+<table class="table table-hover">
+  <thead class="thead-inverse">
+    <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+    <th>Header 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr (click)="open(content)">
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    </tr>
+    <tr>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    </tr>
+    <tr>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Text</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-search-input" class="col-2 col-form-label">Search</label>
+        <div class="col-10">
+          <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>

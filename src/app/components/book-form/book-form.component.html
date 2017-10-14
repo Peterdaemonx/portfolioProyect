@@ -1,18 +1,42 @@
+<ngb-rating [(rate)]="currentRate"></ngb-rating>
+<pre>Rate: <b>{{currentRate}}</b></pre>
 
 <div class="container">
-
   <form>
-    <div class="form-group">
-      <label for="formGroupExampleInput">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Text</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="formGroupExampleInput2">Another label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    <div class="form-group row">
+      <label for="example-search-input" class="col-2 col-form-label">Search</label>
+      <div class="col-10">
+        <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+      </div>
+    </div>
+    <div class="form-group row has-success">
+      <label for="inputHorizontalSuccess" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputHorizontalSuccess" placeholder="name@example.com">
+        <div class="form-control-feedback">Success! You've done it.</div>
+      </div>
+    </div>
+    <div class="form-group row has-warning">
+      <label for="inputHorizontalWarning" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputHorizontalWarning" placeholder="name@example.com">
+        <div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
+      </div>
+    </div>
+    <div class="form-group row has-danger">
+      <label for="inputHorizontalDnger" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputHorizontalDnger" placeholder="name@example.com">
+        <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+      </div>
     </div>
   </form>
-
-</div>
 
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
@@ -30,5 +54,9 @@
 </ng-template>
 
 <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Submit</button>
-
+</div>
 <hr>
+<div>Default pagination</div>
+<ngb-pagination [collectionSize]="pages" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+
+<pre>Current page: {{page}}</pre>

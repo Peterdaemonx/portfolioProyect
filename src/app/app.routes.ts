@@ -6,7 +6,8 @@ import {
   SearchComponent,
   AboutComponent,
   LoginFormComponent,
-  BookFormComponent
+  BookFormComponent,
+  TableFormComponent
 } from "./components/index.paginas"
 
 const app_routes: Routes = [
@@ -17,6 +18,7 @@ const app_routes: Routes = [
   { path: 'search/:termino', component: SearchComponent },
   { path: 'login', component: LoginFormComponent },
   { path: 'book', component: BookFormComponent },
+  { path: 'table', component: TableFormComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

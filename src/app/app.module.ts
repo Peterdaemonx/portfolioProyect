@@ -21,6 +21,7 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { SearchComponent } from './components/search/search.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { BookFormComponent } from './components/book-form/book-form.component';
+import { TableFormComponent } from './components/table-form/table-form.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { BookFormComponent } from './components/book-form/book-form.component';
     ProductoComponent,
     SearchComponent,
     LoginFormComponent,
-    BookFormComponent
+    BookFormComponent,
+    TableFormComponent
   ],
   imports: [
     BrowserModule,
