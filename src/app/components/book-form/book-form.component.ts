@@ -9,6 +9,8 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 export class BookFormComponent {
   closeResult: string;
   pages = 40;
+  currentRate = 0;
+  page = 0;
 
     constructor(private modalService: NgbModal) {}
 

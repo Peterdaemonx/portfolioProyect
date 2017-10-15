@@ -1,29 +1,26 @@
-<table class="table table-hover">
-  <thead class="thead-inverse">
-    <tr>
-    <th>Header 1</th>
-    <th>Header 2</th>
-    <th>Header 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr (click)="open(content)">
-    <td>Cell</td>
-    <td>Cell</td>
-    <td>Cell</td>
-    </tr>
-    <tr>
-    <td>Cell</td>
-    <td>Cell</td>
-    <td>Cell</td>
-    </tr>
-    <tr>
-    <td>Cell</td>
-    <td>Cell</td>
-    <td>Cell</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <div id="table" class="table-editable">
+    <span class="table-add glyphicon-plus" (click)="addElement(content)"></span>
+  </div>
+
+  <table #table class="table table-hover">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Producto</th>
+        <th>Categoría</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr (click)="open(content)" *ngFor="let product of productList">
+        <td>{{ product.titulo }}</td>
+        <td>{{ product.categoria }}</td>
+        <td>{{ product.url }}</td>
+      </tr>
+    </tbody>
+    </table>
+</div>
+
 
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">

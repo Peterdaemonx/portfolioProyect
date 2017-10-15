@@ -12,7 +12,7 @@ export class ProductoService {
     this.CargandoProductos();
   }
 
-  private CargandoProductos(){
+  public CargandoProductos(){
     if (this.productos.length == 0) {
       let promesa = new Promise((resolver, reject) => {
         this.http.get("https://portafolio-71d53.firebaseio.com/productos_idx.json")

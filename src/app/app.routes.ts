@@ -7,7 +7,8 @@ import {
   AboutComponent,
   LoginFormComponent,
   BookFormComponent,
-  TableFormComponent
+  TableFormComponent,
+  DatatablesComponent
 } from "./components/index.paginas"
 
 const app_routes: Routes = [
@@ -19,6 +20,7 @@ const app_routes: Routes = [
   { path: 'login', component: LoginFormComponent },
   { path: 'book', component: BookFormComponent },
   { path: 'table', component: TableFormComponent },
+  { path: 'datatables', component: DatatablesComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
